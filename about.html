@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Dranreb Sinogba, Computer Engineering Graduate.">
+  <title>Portfolio - Dranreb Sinogba - About Me</title>
+  <style>
+
+    :root {
+      --nav: #2a2d5a;
+      --accent: rgb(155, 70, 0);
+      --panel: rgba(247, 214, 123, 0.233);
+      --border: rgb(255, 192, 74);
+      --text: #111;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--text);
+      background-image: url('./images/background.jpg');
+      background-color: rgba(255, 255, 255, 0.6);
+      background-blend-mode: lighten;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+    }
+
+    .navbar {
+      background-color: var(--nav);
+      width: 100%;
+      min-height: 8rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 5rem;
+      height: 5rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-text strong {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .brand-text span {
+      font-size: 1.2rem;
+      color: #b6b6b6;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: .8rem;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      color: white;
+      transition: transform .3s ease, background-color .3s ease;
+      font-size: 1.8rem;
+      padding: .8rem 1.1rem;
+      border-radius: .4rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: rgba(255, 255, 255, .295);
+    }
+
+    main {
+      padding-top: 8rem;
+    }
+
+    .page-title {
+      margin: 4rem 6.4%;
+      text-align: center;
+    }
+
+    .page-title h1 {
+      font-size: clamp(5rem, 10vw, 14rem);
+      color: var(--accent);
+    }
+
+    .panel {
+      margin: 4rem 6.4%;
+      background-color: var(--panel);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    .card {
+      margin: 5rem 6.4%;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      background-color: var(--panel);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    .card img.main-image {
+      width: 20vw;
+      min-width: 200px;
+      max-width: 350px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,.2), 0 6px 20px rgba(0,0,0,.19);
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card-content h1 {
+      font-size: clamp(3rem, 4vw, 6rem);
+      color: var(--accent);
+    }
+
+    .card-content h2 {
+      font-size: clamp(2.4rem, 3vw, 4rem);
+      color: black;
+    }
+
+    .card-content p {
+      font-size: clamp(1.7rem, 2vw, 2.4rem);
+      margin-top: 1.5rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 1.6rem;
+      margin: 5rem 2rem 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        position: relative;
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+
+      main {
+        padding-top: 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .card {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .card img.main-image {
+        width: min(70vw, 300px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        font-size: 55%;
+      }
+
+      .nav-links {
+        gap: .3rem;
+      }
+
+      .nav-links a {
+        font-size: 1.5rem;
+        padding: .7rem;
+      }
+
+      .brand-text strong {
+        font-size: 1.7rem;
+      }
+    }
+
+  </style>
+</head>
+  <nav class="navbar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="./images/Dranreb Sinogba.jpg" alt="Dranreb Sinogba">
+      </a>
+      <div class="brand-text">
+        <strong>Dranreb Sinogba</strong>
+        <span>Computer Engineering Graduate</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="skills.html" class="">Skills</a></li>
+        <li><a href="education.html" class="">Education</a></li>
+        <li><a href="projects.html" class="">Projects</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="card" style="min-height: 80vh; margin-top: 5rem; text-align: center;">
+      <div>
+        <img class="main-image" src="./images/Dranreb Sinogba.jpg" alt="Dranreb Sinogba"
+             style="border-radius: 50%; border: 1rem solid rgba(255, 230, 0, .205);">
+      </div>
+      <div class="card-content">
+        <h1 style="font-size: clamp(5rem, 7vw, 8rem); color:#111;">About Me</h1>
+        <h2 style="margin:1rem 0;">Dranreb Peter C. Sinogba</h2>
+        <h3 style="font-size: clamp(2rem, 2.5vw, 3rem); margin:2rem 0 4rem; color:var(--accent);">
+          Computer Engineering Graduate in Bulacan State University - Meneses Campus
+        </h3>
+        <p><img src="./images/map-location.svg" alt="Map location" style="height:2rem;"> 4292, Bambang, Bulacan, Bulacan</p>
+        <p><img src="./images/phone.svg" alt="Phone" style="height:2rem;"> +63 922 390 6086</p>
+        <p><img src="./images/envelope.svg" alt="Email" style="height:2rem;"> dranrebsinogba@gmail.com</p>
+        <p><a href="ResumeFile/Sinogba, Dranreb Peter C. - Resume.pdf" style="color:var(--accent);">
+          <img src="./images/file.svg" alt="Resume" style="height:2rem;"> My Resume
+        </a></p>
+        <p><a href="education.html" style="color:var(--accent);">
+          <img src="./images/school.svg" alt="School" style="height:2rem;"> My Educational Background
+        </a></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2026 All rights reserved by Dranreb Sinogba
+  </footer>
+</body>
+</html>
